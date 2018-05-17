@@ -10,3 +10,9 @@ Set-PSReadlineKeyHandler -Key Tab -Function Complete
 # does need the PSCode installed as administrator first...
 #   C:\WINDOWS\system32> Install-Module -Name PSCode
 Import-Module PSCode
+
+
+
+#https://stackoverflow.com/questions/1011243/where-to-put-powershell-scripts
+$ProfileRoot = (Split-Path -Parent $script:MyInvocation.MyCommand.Path)
+$env:path += ";$ProfileRoot\Scripts"
