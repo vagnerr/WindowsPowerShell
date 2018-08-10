@@ -16,3 +16,6 @@ Import-Module PSCode
 #https://stackoverflow.com/questions/1011243/where-to-put-powershell-scripts
 $ProfileRoot = (Split-Path -Parent $script:MyInvocation.MyCommand.Path)
 $env:path += ";$ProfileRoot\Scripts"
+
+#https://superuser.com/questions/34492/powershell-equivalent-to-unix-which-command
+New-Alias which get-command
